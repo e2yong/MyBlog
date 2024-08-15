@@ -30,6 +30,7 @@ dependencies {
 
 	// Thymeleaf
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 
 	// MariaDB + JPA
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
@@ -46,6 +47,9 @@ dependencies {
 	//implementation 'org.springframework.boot:spring-boot-starter-security'
 	//implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
 	//testImplementation 'org.springframework.security:spring-security-test'
+
+	// Gmail SMTP Server
+	imple
 }
 
 tasks.named('test') {

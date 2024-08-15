@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Tag(name = "Home Controller", description = "Home and Login")
 public class HomeController {
 
-    @GetMapping("/home")
+    @GetMapping("/")
     @Operation(summary = "Home", description = "홈 페이지로 이동")
     public String home() {
         log.info("Get Home");
@@ -26,5 +26,19 @@ public class HomeController {
     public String login() {
         log.info("Get Login");
         return "/login";
+    }
+
+    @GetMapping("/projects")
+    @Operation(summary = "Project", description = "프로젝트 페이지로 이동")
+    public String portfolio() {
+        log.info("GET ProjectList");
+        return "/projects/projectList";
+    }
+
+    @GetMapping("/test")
+    @Operation(summary = "Test", description = "홈 페이지로 이동")
+    public String test() {
+        log.info("Get TEST");
+        return "/test";
     }
 }

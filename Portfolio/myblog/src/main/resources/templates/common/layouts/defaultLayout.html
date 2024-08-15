@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+	Strongly Typed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<!-- 기본 레이아웃 -->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<!-- Config -->
+<head th:replace="/common/fragments/config :: ConfigFragment">
+    <title></title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header th:replace="/common/fragments/header :: HeaderFragment"></header>
+
+    <!-- Content -->
+    <th:block layout:fragment="Content"></th:block>
+
+    <!-- Footer -->
+    <footer th:replace="/common/fragments/footer :: FooterFragment"></footer>
+</body>
+
+</html>
