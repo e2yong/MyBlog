@@ -5,22 +5,31 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <!-- 기본 레이아웃 -->
-<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
-<!-- Config -->
-<head th:replace="/common/fragments/config :: ConfigFragment">
-    <title></title>
+<!-- Head 영역 - 공통 JS/CSS 관리 -->
+<head>
+    <!-- Common Head -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">MY BLOG</title>
+
+    <!-- Config 영역 - 공통 JS, CSS -->
+    <header th:replace="/common/fragments/config :: ConfigFragment"></header>
 </head>
 
 <body>
-    <!-- Header -->
+<div id="page-wrapper">
+    <!-- Header 영역  - Body의 공통 Header -->
     <header th:replace="/common/fragments/header :: HeaderFragment"></header>
 
-    <!-- Content -->
+    <!-- Content 영역  - 작성해야되는 부분-->
     <th:block layout:fragment="Content"></th:block>
 
-    <!-- Footer -->
+    <!-- Footer 영역 - Body의 공통 Footer -->
     <footer th:replace="/common/fragments/footer :: FooterFragment"></footer>
+</div>
 </body>
 
 </html>

@@ -7,22 +7,15 @@
 <!-- 공통 JS, CSS 초기 설정 -->
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <th:block th:fragment="ConfigFragment">
-    <head>
-        <!-- Common Head -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <title>나의 블로그</title>
+    <!-- Common CSS -->
+    <link rel="stylesheet" th:inline="css" th:href="@{/css/main.css}" />
 
-        <!-- Common CSS -->
-        <link rel="stylesheet" th:inline="css" th:href="@{/css/main.css}" />
-
-        <!-- Common JS -->
-        <script th:inline="javascript" type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
-        <script th:inline="javascript" type="text/javascript" th:src="@{/js/jquery.dropotron.min.js}"></script>
-        <script th:inline="javascript" type="text/javascript" th:src="@{/js/browser.min.js}"></script>
-        <script th:inline="javascript" type="text/javascript" th:src="@{/js/breakpoints.min.js}"></script>
-        <script th:inline="javascript" type="text/javascript" th:src="@{/js/util.js}"></script>
-        <script th:inline="javascript" type="text/javascript" th:src="@{/js/main.js}"></script>
-    </head>
+    <!-- Common JS -->
+    <script th:inline="javascript" type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <script th:inline="javascript" type="text/javascript" th:src="@{/js/jquery.dropotron.min.js}"></script>
+    <script th:inline="javascript" type="text/javascript" th:src="@{/js/browser.min.js}"></script>
+    <script th:inline="javascript" type="text/javascript" th:src="@{/js/breakpoints.min.js}"></script>
+    <script th:inline="javascript" type="text/javascript" th:src="@{/js/util.js}"></script>
+    <script th:inline="javascript" type="text/javascript" th:src="@{/js/main.js}"></script>
 </th:block>
 </html>

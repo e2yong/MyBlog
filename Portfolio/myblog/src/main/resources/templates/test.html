@@ -4,20 +4,50 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<!-- 레이아웃 테스트 -->
+<!-- HOME 페이지 -->
 <html lang="ko"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{/common/layouts/defaultLayout}"
       layout:fragment="Content">
 <head>
-    <title>테스트 페이지</title>
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">HOME</title>
 </head>
-<body>
-    <div>
-        <h1>Content 영역</h1>
+
+<!-- Content -->
+<body class="homepage is-preload">
+<section id="main">
+    <div class="container">
+        <div id="content">
+
+            <!-- Post -->
+            <article class="box post">
+                <header>
+                    <h2>Behold! This is the <strong>no sidebar</strong> layout<br />
+                        with no sidebar at all!</h2>
+                </header>
+                <span class="image featured"><img src="images/pic04.jpg" alt="" /></span>
+                <h3>And yeah, that's basically it</h3>
+                <p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
+                    ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
+                    sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
+                    in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
+                    magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
+                    consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
+                    justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
+                    mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
+                    Curabitur leo nibh, rutrum eu malesuada in tristique</p>
+                <p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat
+                    Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit ligula
+                    vel quam viverra sit amet mollis tortor congue. Sed quis mauris sit amet
+                    magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada in,
+                    tristique Curabitur leo nibh, rutrum eu malesuada in, tristique
+                    at erat lorem ipsum dolor sit amet lorem ipsum sed consequat magna
+                    tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros consequat
+                    magna tempus</p>
+            </article>
+        </div>
     </div>
+</section>
 </body>
-
-
 </html>
